@@ -1,0 +1,255 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_hhip8"]
+
+[resource]
+script = ExtResource("1_hhip8")
+using_states = PackedStringArray()
+titles = {
+"start_chicken_pasture_box": "15",
+"start_cow_pasture_box": "3"
+}
+character_names = PackedStringArray("Pasture Box", "Usagi")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start_cow_pasture_box",
+"type": &"title"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"13": {
+"id": "13",
+"next_id": "15",
+"text": "start_chicken_pasture_box",
+"type": &"title"
+},
+"15": {
+"character": "Pasture Box",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], your animals are hungry",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], your animals are hungry",
+"type": &"dialogue"
+},
+"16": {
+"character": "Pasture Box",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Would you like to feed your chickens?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Would you like to feed your chickens?",
+"type": &"dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"next_id_after": "23",
+"notes": "",
+"responses": PackedStringArray("17", "20"),
+"tags": PackedStringArray(),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": &"response"
+},
+"18": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "Yeah! Lets feed my chickens!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah! Lets feed my chickens!",
+"type": &"dialogue"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameDialogueManager"
+}, {
+"type": "dot"
+}, {
+"function": "action_feed_the_animals",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "23",
+"parent_id": "17",
+"type": &"mutation"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"next_id_after": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": &"response"
+},
+"21": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "23",
+"notes": "",
+"parent_id": "20",
+"tags": PackedStringArray(),
+"text": "No! I don't need to feed them. i've enough eggs.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No! I don't need to feed them. i've enough eggs.",
+"type": &"dialogue"
+},
+"23": {
+"id": "23",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Pasture Box",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], your animals are hungry",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], your animals are hungry",
+"type": &"dialogue"
+},
+"4": {
+"character": "Pasture Box",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Would you like to feed your cows?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Would you like to feed your cows?",
+"type": &"dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "11",
+"notes": "",
+"responses": PackedStringArray("5", "8"),
+"tags": PackedStringArray(),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": &"response"
+},
+"6": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Yeah! Lets feed my cows!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah! Lets feed my cows!",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameDialogueManager"
+}, {
+"type": "dot"
+}, {
+"function": "action_feed_the_animals",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "11",
+"parent_id": "5",
+"type": &"mutation"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": &"response"
+},
+"9": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "No! I don't need to feed them. i've enough milk.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No! I don't need to feed them. i've enough milk.",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start_cow_pasture_box
+
+Pasture Box: [[Hi|Hello|Howdy]], your animals are hungry
+Pasture Box: Would you like to feed your cows?
+- Yes
+	Usagi: Yeah! Lets feed my cows!
+	do GameDialogueManager.action_feed_the_animals()
+- No
+	Usagi: No! I don't need to feed them. i've enough milk.
+	
+=> END
+
+~ start_chicken_pasture_box
+
+Pasture Box: [[Hi|Hello|Howdy]], your animals are hungry
+Pasture Box: Would you like to feed your chickens?
+- Yes
+	Usagi: Yeah! Lets feed my chickens!
+	do GameDialogueManager.action_feed_the_animals()
+- No
+	Usagi: No! I don't need to feed them. i've enough eggs.
+	
+=> END"
+metadata/dialogue_manager_version = "2.45.0"

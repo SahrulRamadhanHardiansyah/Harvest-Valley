@@ -1,0 +1,245 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_hpatn"]
+
+[resource]
+script = ExtResource("1_hpatn")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("Nathan", "Usagi")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "Yeah, i can grow crops.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah, i can grow crops.",
+"type": &"dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GameDialogueManager"
+}, {
+"type": "dot"
+}, {
+"function": "action_give_crop_seeds",
+"type": &"function",
+"value": Array[Array]([])
+}]),
+"is_blocking": true
+},
+"next_id": "16",
+"parent_id": "9",
+"type": &"mutation"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"next_id_after": "16",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "No, i don't want them",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, i don't want them",
+"type": &"response"
+},
+"13": {
+"character": "Usagi",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "end",
+"notes": "",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "I'm not ready to grow my farm yet.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm not ready to grow my farm yet.",
+"type": &"dialogue"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "end",
+"next_id_after": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "No, thanks. I'm ready to manage this farm",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, thanks. I'm ready to manage this farm",
+"type": &"response"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "2",
+"next_id_after": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Start again",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Start again",
+"type": &"response"
+},
+"16": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Good luck.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Good luck.",
+"type": &"dialogue"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Usagi]], nice to meet you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Usagi]], nice to meet you.",
+"type": &"dialogue"
+},
+"3": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Welcome to your new farm.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Welcome to your new farm.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "At the start, I will teach you how to manage this farm.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "At the start, I will teach you how to manage this farm.",
+"type": &"dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "16",
+"notes": "",
+"responses": PackedStringArray("5", "14", "15"),
+"tags": PackedStringArray(),
+"text": "Okay",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay",
+"type": &"response"
+},
+"6": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "As you can see, the cows and chickens are hungry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "As you can see, the cows and chickens are hungry.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "You need to grow some crops to feed them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You need to grow some crops to feed them.",
+"type": &"dialogue"
+},
+"8": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Here are some seeds to grow some crops.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here are some seeds to grow some crops.",
+"type": &"dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "16",
+"notes": "",
+"parent_id": "5",
+"responses": PackedStringArray("9", "12"),
+"tags": PackedStringArray(),
+"text": "Take crop seeds",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Take crop seeds",
+"type": &"response"
+}
+}
+raw_text = "~ start
+Nathan: [[Hi|Hello|Usagi]], nice to meet you.
+Nathan: Welcome to your new farm.
+Nathan: At the start, I will teach you how to manage this farm.
+- Okay
+	Nathan: As you can see, the cows and chickens are hungry.
+	Nathan: You need to grow some crops to feed them.
+	Nathan: Here are some seeds to grow some crops.
+	- Take crop seeds
+		Usagi: Yeah, i can grow crops.
+		do GameDialogueManager.action_give_crop_seeds()
+	- No, i don't want them
+		Usagi: I'm not ready to grow my farm yet. => END
+- No, thanks. I'm ready to manage this farm => END
+- Start again => start
+Nathan: Good luck.
+=> END "
+metadata/dialogue_manager_version = "2.45.0"

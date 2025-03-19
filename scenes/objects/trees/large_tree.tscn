@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://co67dtkgq5rrg"]
+
+[ext_resource type="Texture2D" uid="uid://c5nb6wdc65wne" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_mxq2j"]
+[ext_resource type="Shader" path="res://scenes/objects/shake.gdshader" id="1_o6mnt"]
+[ext_resource type="Script" path="res://scenes/objects/trees/large_tree.gd" id="2_qsqbn"]
+[ext_resource type="PackedScene" uid="uid://lrj82xqvnwok" path="res://scenes/components/hurt_component.tscn" id="2_yfv2i"]
+[ext_resource type="PackedScene" uid="uid://cmvnamxv7633e" path="res://scenes/components/damage_component.tscn" id="3_s7lbl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcism"]
+resource_local_to_scene = true
+shader = ExtResource("1_o6mnt")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owt8h"]
+atlas = ExtResource("1_mxq2j")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sxgxo"]
+radius = 6.08276
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sydv2"]
+size = Vector2(15, 23)
+
+[node name="LargeTree" type="Sprite2D"]
+material = SubResource("ShaderMaterial_jcism")
+position = Vector2(0, -4)
+texture = SubResource("AtlasTexture_owt8h")
+offset = Vector2(0, -8)
+script = ExtResource("2_qsqbn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_sxgxo")
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_yfv2i")]
+position = Vector2(0, -14)
+scale = Vector2(1.06959, 1.08333)
+tool = 1
+
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_sydv2")
+debug_color = Color(0.937584, 1.48243e-05, 0.627349, 0.42)
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_s7lbl")]
+max_damage = 5

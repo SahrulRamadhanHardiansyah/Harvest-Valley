@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://ccd7xmjd7mvrf"]
+
+[ext_resource type="Texture2D" uid="uid://ctc8ml6clkwcs" path="res://assets/game/objects/basic_plants.png" id="1_gnj1e"]
+[ext_resource type="Script" path="res://scenes/objects/plants/corn.gd" id="1_tdei3"]
+[ext_resource type="PackedScene" uid="uid://ewujrjgnsbva" path="res://scenes/objects/plants/watering_particles.tscn" id="2_fhn5q"]
+[ext_resource type="PackedScene" uid="uid://lrj82xqvnwok" path="res://scenes/components/hurt_component.tscn" id="2_gvvks"]
+[ext_resource type="PackedScene" uid="uid://bfer70f3toyy4" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_7nvi2"]
+[ext_resource type="PackedScene" uid="uid://s01tnrefhs7i" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="5_dg5tr"]
+[ext_resource type="PackedScene" uid="uid://croglqo4uiale" path="res://scenes/components/save_data_component.tscn" id="7_c5fsx"]
+[ext_resource type="Resource" uid="uid://y1p2bpb07afc" path="res://resources/scene_data_resource.tres" id="8_jh8sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvhtu"]
+size = Vector2(13.2794, 8)
+
+[node name="Corn" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_tdei3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_gnj1e")
+hframes = 6
+vframes = 2
+frame = 1
+
+[node name="WateringParticles" parent="." instance=ExtResource("2_fhn5q")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("3_7nvi2")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_dg5tr")]
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_gvvks")]
+position = Vector2(0, -4)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 3)
+scale = Vector2(0.939605, 1)
+shape = SubResource("RectangleShape2D_xvhtu")
+
+[node name="SaveDataComponent" parent="." instance=ExtResource("7_c5fsx")]
+save_data_resource = ExtResource("8_jh8sn")

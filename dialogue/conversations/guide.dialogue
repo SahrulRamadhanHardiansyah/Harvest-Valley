@@ -1,0 +1,17 @@
+~ start
+Nathan: [[Hi|Hello|Usagi]], nice to meet you.
+Nathan: Welcome to your new farm.
+Nathan: At the start, I will teach you how to manage this farm.
+- Okay
+	Nathan: As you can see, the cows and chickens are hungry.
+	Nathan: You need to grow some crops to feed them.
+	Nathan: Here are some seeds to grow some crops.
+	- Take crop seeds
+		Usagi: Yeah, i can grow crops.
+		do GameDialogueManager.action_give_crop_seeds()
+	- No, i don't want them
+		Usagi: I'm not ready to grow my farm yet. => END
+- No, thanks. I'm ready to manage this farm => END
+- Start again => start
+Nathan: Good luck.
+=> END 
