@@ -27,3 +27,10 @@
 
 ## 📌 Catatan
 Game ini masih dalam tahap pengembangan, jadi fitur dan mekanisme permainan bisa berubah seiring waktu. Saran dan masukan
+
+## Download Game
+
+Klik link di bawah ini untuk mendownload game versi terbaru:
+
+[⬇️ Download Game (Windows .exe)](https://github.com/username/repo-name/releases/download/v1.0.0/namafile.exe)
+
