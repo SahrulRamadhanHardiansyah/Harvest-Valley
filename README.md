@@ -33,5 +33,5 @@ Game ini masih dalam tahap pengembangan, jadi fitur dan mekanisme permainan bisa
 Klik link di bawah ini untuk mendownload game versi terbaru:
 
 **V1**
-[⬇️ Download Game (Windows .exe)](https://github.com/username/repo-name/releases/download/v1.0.0/namafile.exe](https://github.com/SahrulRamadhanHardiansyah/Harvest-Valley/releases/download/v1.0.0/Harvest.Valley.exe)
+[⬇️ Download Game (Windows .exe)]([https://github.com/username/repo-name/releases/download/v1.0.0/namafile.exe](https://github.com/SahrulRamadhanHardiansyah/Harvest-Valley/releases/download/v1.0.0/Harvest.Valley.exe))
 
