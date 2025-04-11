@@ -26,7 +26,7 @@
 3. Jalankan **main.tscn** untuk memulai game.
 
 ## 📌 Catatan
-Game ini masih dalam tahap pengembangan, jadi fitur dan mekanisme permainan bisa berubah seiring waktu. Saran dan masukan
+Game ini masih dalam tahap pengembangan, jadi fitur dan mekanisme permainan bisa berubah seiring waktu.
 
 ## Download Game
 
