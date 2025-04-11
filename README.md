@@ -35,3 +35,9 @@ Klik link di bawah ini untuk mendownload game versi terbaru:
 **V1.0.0**
 [⬇️ Download Game (Windows .exe)](https://github.com/SahrulRamadhanHardiansyah/Harvest-Valley/releases/download/v1.0.0/Harvest.Valley.exe)
 
+## Credits
+Game ini dibuat oleh:
+- [@SahrulRamadhanHardiansyah](https://github.com/SahrulRamadhanHardiansyah)
+- [@MochammadAkhdanRafa](https://github.com/MochammadAkhdanRafa)
+
+
