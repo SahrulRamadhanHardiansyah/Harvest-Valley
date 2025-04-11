@@ -5,7 +5,7 @@
 ## 🎮 Kontrol
 - **WASD** / **Arrow Keys** → Bergerak
 - **E** → Berinteraksi dengan objek/NPC
-- **Mouse Click** → Menggunakan alat atau menyerang
+- **Mouse Click** → Menggunakan alat
 
 ## 🔥 Fitur
 - 🌳 **Choppable Trees** – Tebang pohon dan kumpulkan kayu.
