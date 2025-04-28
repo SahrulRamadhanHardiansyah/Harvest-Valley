@@ -40,4 +40,7 @@ Game ini dibuat oleh:
 - [@SahrulRamadhanHardiansyah](https://github.com/SahrulRamadhanHardiansyah)
 - [@MochammadAkhdanRafa](https://github.com/MochammadAkhdanRafa)
 
+Tutorial:
+- [@SahrulRamadhanHardiansyah](https://www.youtube.com/@rapidvectors)
+
 
