@@ -22,8 +22,8 @@
 
 ## 🚀 Cara Menjalankan
 1. **Download & Install Godot** [Di sini](https://godotengine.org/download)
+2. Klon repositori menggunakan URL Git proyek.
 ```sh
-2. Klon repositori menggunakan URL Git proyek:
 git clone https://github.com/SahrulRamadhanHardiansyah/Harvest-Valley
 ```
 3. Buka Godot dan **load proyek ini**.
