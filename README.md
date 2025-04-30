@@ -22,8 +22,13 @@
 
 ## 🚀 Cara Menjalankan
 1. **Download & Install Godot** [Di sini](https://godotengine.org/download)
-2. Buka Godot dan **load proyek ini**.
-3. Jalankan **main.tscn** untuk memulai game.
+2.
+```sh
+Clone the repository using the project's Git URL.
+git clone https://github.com/SahrulRamadhanHardiansyah/Harvest-Valley
+```
+3. Buka Godot dan **load proyek ini**.
+4. Jalankan **main.tscn** untuk memulai game.
 
 ## 📌 Catatan
 Game ini masih dalam tahap pengembangan, jadi fitur dan mekanisme permainan bisa berubah seiring waktu.
